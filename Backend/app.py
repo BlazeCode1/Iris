@@ -21,10 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Define the path to the model
-path = "./model/model.h5"  # Ensure this path is correct relative to your server's run location
-
-# Load the model
+path = "./model/effnetb4.keras"
 model = models.load_model(path)
 
 def occlusion_sensitivity_map(model, image, original_img, patch_size=20, stride=20, class_index=None):
@@ -174,7 +171,7 @@ def preprocess_and_predict(image, model):
         enhanced_image = cv2.bitwise_and(cropped_image, mask)
 
     # Step 4: Resize and Normalize
-    resized_image = cv2.resize(enhanced_image, (600, 600))
+    resized_image = cv2.resize(enhanced_image, (400, 400))
     normalized_image = resized_image / 255.0
     resized_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2RGB)
     input_image = np.expand_dims(normalized_image, axis=0)
