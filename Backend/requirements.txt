@@ -1,0 +1,7 @@
+fastapi
+tensorflow==2.17.1
+pillow
+uvicorn
+keras==3.5.0
+matplotlib
+opencv-python

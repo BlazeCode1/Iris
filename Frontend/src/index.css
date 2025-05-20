@@ -1,0 +1,70 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 282 56% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 284 54% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 284 54% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 280 35% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 198 32% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 284 20% 15%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 280 20% 25%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 20% 20%;
+    --input: 284 20% 15%;
+    --ring: 280 35% 48%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 284 54% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 280 35% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 20% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 280 20% 20%;
+    --sidebar-ring: 280 35% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-ires-darkPurple text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(135deg, #b45dbb 0%, #8351a8 50%, #4d7b93 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .bg-gradient-ires {
+    background-image: linear-gradient(135deg, #b45dbb 0%, #8351a8 50%, #4d7b93 100%);
+  }
+}
